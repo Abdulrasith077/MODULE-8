@@ -26,39 +26,33 @@ To write a Python program to:
 ---
 
 ## 💻  Program
-```
-n = int(input("Enter number of students: "))
-students = []
-for _ in range(n):
-    name = input("Enter student name: ")
-    grade = float(input("Enter student grade: "))
-    students.append([name, grade])
-grades = sorted(set([grade for _, grade in students]))
-second_lowest = grades[1] if len(grades) > 1 else grades[0]
-second_lowest_students = [name for name, grade in students if grade == second_lowest]
-second_lowest_students.sort()
-print("\nStudents with the second lowest grade:")
-for student in second_lowest_students:
-    print(student)
-```
+~~~
+l1=[]
+l2=[]
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    l1.extend([name,score])
+    l2.append(l1)
+    l1=[]
+l3=[]
+l4=[]
+for i in l2:
+    l3.append(i[1])
+l3.sort()
+for i in l2:
+    if i[1]==l3[1]:
+        l4.append(i[0])
+l4.sort()
+for i in l4:
+    print(i)
+~~~
 
 ## Output
-```
-Enter number of students: 5
-Enter student name: Harry
-Enter student grade: 37.2
-Enter student name: Berry
-Enter student grade: 37.2
-Enter student name: Tina
-Enter student grade: 37.3
-Enter student name: Akriti
-Enter student grade: 41
-Enter student name: Harsh
-Enter student grade: 39
+<img width="347" height="402" alt="image" src="https://github.com/user-attachments/assets/09759c1e-01ad-4562-9102-d958d881a5ea" />
 
-Students with the second lowest grade:
-Harsh
-```
+
 ## Result
-Hence Found Students with the Second Lowest Grade.
+Thus the output is verified.
+
 
